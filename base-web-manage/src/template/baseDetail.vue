@@ -1,0 +1,65 @@
+<template>
+  <div>
+    <Tips :title="title"></Tips>
+    <div class="c-form f-single">
+      <Form ref="formValidate" :model="formValue">
+        <FormItem label="用户名：">
+          <p>{{ formValue.name }}</p>
+        </FormItem>
+        <FormItem label="邮箱：">
+          <p>{{ formValue.email }}</p>
+        </FormItem>
+        <FormItem label="手机号：">
+          <p>{{ formValue.tel }}</p>
+        </FormItem>
+        <FormItem label="订单号：">
+          <p>{{ formValue.order }}</p>
+        </FormItem>
+        <FormItem label="下单时间：">
+          <p>{{ formValue.time }}</p>
+        </FormItem>
+        <FormItem label="采购单位：">
+          <p>{{ formValue.unit }}</p>
+        </FormItem>
+        <FormItem label="供应商：">
+          <p>{{ formValue.supplier }}</p>
+        </FormItem>
+        <FormItem label="支付方式：">
+          <p>{{ formValue.type }}</p>
+        </FormItem>
+        <FormItem label="送达时间：">
+          <p>{{ formValue.send }}</p>
+        </FormItem>
+      </Form>
+    </div>
+  </div>
+</template>
+
+<script>
+  import Tips from '@/components/tips'
+  export default {
+    components: {
+      Tips
+    },
+    data() {
+      return {
+        title:'基本详情页',
+        formValue: {
+          name: '呵呵哒',
+          email:'363420113@qq.com',
+          tel:'13164621126',
+          order:'2018030300001386',
+          time:'2018-03-03 16:40:07',
+          unit:'国电物资集团有限公司上海分公司',
+          supplier:'京东',
+          type:'预付款',
+          send:'工作日'
+        }
+      }
+    }
+  }
+</script>
+
+<style scoped>
+
+</style>
